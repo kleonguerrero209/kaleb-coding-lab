@@ -14,7 +14,7 @@ const options = {
 document.getElementById("date").textContent =
 today.toLocaleDateString("en-US", options);
 
-function updateCLock(){
+function updateCLock() {
 
     const now = new Date();
 
@@ -24,4 +24,4 @@ function updateCLock(){
 
 updateCLock();
 
-setInterval(updateCLock,1000);
+setInterval(updateCLock, 1000);

@@ -96,3 +96,11 @@ footer {
   background: #020617;
   color: #94a3b8;
 }
+
+.widget {
+  text-align: center;
+}
+
+#greeting {
+  text-align: center;
+}
