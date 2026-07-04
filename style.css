@@ -104,3 +104,12 @@ footer {
 #greeting {
   text-align: center;
 }
+
+.widget span {
+  font-weight: normal;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}

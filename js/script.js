@@ -25,3 +25,9 @@ function updateCLock() {
 updateCLock();
 
 setInterval(updateCLock, 1000);
+
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+})
