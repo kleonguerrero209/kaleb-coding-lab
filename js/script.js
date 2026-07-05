@@ -14,7 +14,7 @@ const options = {
 document.getElementById("date").textContent =
 today.toLocaleDateString("en-US", options);
 
-function updateCLock() {
+function updateClock() {
 
     const now = new Date();
 
@@ -22,9 +22,9 @@ function updateCLock() {
     now.toLocaleTimeString()
 }
 
-updateCLock();
+updateClock();
 
-setInterval(updateCLock, 1000);
+setInterval(updateClock, 1000);
 
 const themeToggle = document.getElementById("theme-toggle");
 

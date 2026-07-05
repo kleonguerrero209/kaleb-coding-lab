@@ -113,3 +113,21 @@ body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
+
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #000000, #18181b);
+}
+
+body.dark-mode .card {
+  background: #18181b;
+  border-color: #52525B;
+}
+
+body.dark-mode .card p,
+body.dark-mode .her p {
+  color: #e5e7eb;
+}
+
+body.dark-mode footer {
+  background: #000000;
+}
