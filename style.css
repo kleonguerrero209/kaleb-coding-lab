@@ -131,3 +131,28 @@ body.dark-mode .hero p {
 body.dark-mode footer {
   background: #000000;
 }
+
+.dashboard-widget {
+  text-align: center;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 30px;
+}
+
+#date {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+#clock {
+  color: #38bdf8;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+body.dark-mode .dashboard-widget {
+  background: #18181b;
+  border-color: #52525B;
+}
