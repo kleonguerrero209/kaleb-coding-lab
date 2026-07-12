@@ -1,5 +1,7 @@
 const greeting  = document.getElementById("greeting");
 
+const tasks = [];
+
 greeting.textContent = "Welcome back, Kaleb";
 
 const today = new Date();
@@ -42,4 +44,26 @@ themeToggle.addEventListener("click", function() {
     } else {
         localStorage.setItem("theme", "light");
     }
+});
+
+const taskInput = document.getElementById("taskInput");
+
+
+const addTaskButton = document.getElementById("addTaskButton");
+
+
+const taskList = document.getElementById("taskList");
+
+addTaskButton.addEventListener("click", function () {
+    if (taskInput.value.trim() === "") {
+        return;
+}
+
+    tasks.push(taskInput.value.trim());
+
+    const newTask = document.createElement("li");
+    newTask.textContent = taskInput.value.trim();
+    taskList.appendChild(newTask);
+
+    taskInput.value = "";
 });
