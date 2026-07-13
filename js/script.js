@@ -67,3 +67,19 @@ addTaskButton.addEventListener("click", function () {
 
     taskInput.value = "";
 });
+
+const missions = [
+    "🟢 Learning JavaScript",
+    "🏋️ Olympic Lifting",
+    "💻 Study Cybersecurity",
+    "🌐 Build KalebOS",
+    "📖 Read 10 Pages"
+];
+
+const missionList = document.getElementById("mission-list");
+
+missions.forEach(function(mission) {
+    const li = document.createElement("li");
+    li.textContent = mission;
+    missionList.appendChild(li);
+});
