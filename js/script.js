@@ -21,7 +21,7 @@ function updateClock() {
     const now = new Date();
 
     document.getElementById("clock").textContent = 
-    now.toLocaleTimeString()
+    now.toLocaleTimeString();
 }
 
 updateClock();
@@ -32,7 +32,7 @@ const themeToggle = document.getElementById("theme-toggle");
 
 const savedTheme = localStorage.getItem("theme");
 
-if  (savedTheme == "dark") {
+if  (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
 }
 
@@ -55,14 +55,22 @@ const addTaskButton = document.getElementById("addTaskButton");
 const taskList = document.getElementById("taskList");
 
 addTaskButton.addEventListener("click", function () {
+    const taskText = taskInput.value.trim();
+
     if (taskInput.value.trim() === "") {
         return;
 }
-
-    tasks.push(taskInput.value.trim());
+    tasks.push(taskText)
 
     const newTask = document.createElement("li");
-    newTask.textContent = taskInput.value.trim();
+
+    newTask.classList.add("mission");
+    newTask.textContent = taskText;
+    
+    newTask.addEventListener("click", function () {
+        newTask.classList.toggle("completed");
+    });
+
     taskList.appendChild(newTask);
 
     taskInput.value = "";
@@ -78,8 +86,20 @@ const missions = [
 
 const missionList = document.getElementById("mission-list");
 
-missions.forEach(function(mission) {
+function createMission(mission){
+
     const li = document.createElement("li");
+
+    li.classList.add("mission");
     li.textContent = mission;
+    li.addEventListener("click", function(){
+        console.log(mission);
+        li.classList.toggle("completed");
+    });
     missionList.appendChild(li);
+
+}
+
+missions.forEach(function(mission){
+    createMission(mission);
 });
